@@ -1,0 +1,70 @@
+<ion-view view-title="Register"  hide-nav-bar="true">
+  <ion-nav-buttons side="right">
+      <!--<button class="button button-positive" ng-click="doSomething()">
+        Login
+      </button>-->
+   </ion-nav-buttons>
+  <ion-content class="padding regPageCont" style="background:#40aeff">
+     <a class="button icon-left ion-chevron-left button-clear button-light" ng-click="doSomething()">Login</a> 
+    <div style="text-align:center; "><div style="margin:0 auto;width:120px; background:#fff;padding:10px; border-radius:5px; box-shadow: 1px 1px 1px #8a8a8a;"><img src="img/car_Care.png" style="width:80px; height:auto"/></div></div> 
+     <h2 style="text-align:center; color:#fff; text-shadow: 1px 1px 1px #4e4e4e;">Car Care</h2>
+     <h4 style="text-align:center; color:#fff; text-shadow: 1px 1px 1px #4e4e4e;">Register</h4>
+    
+    <form name="registerForm" novalidate>
+      <div class="list">
+        <label class="item item-input">
+    <input type="text" ng-model="data.First_name" name="First_name" placeholder="First Name" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.First_name.$error.required && registerForm.First_name.$dirty">
+     <p class="textDanger">*First name required</p>
+  </div>
+  <label class="item item-input">
+    <input type="text" ng-model="data.Last_name" name="Last_name" placeholder="Last Name" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.Last_name.$error.required && registerForm.Last_name.$dirty">
+     <p class="textDanger">*Last name is required</p>
+  </div>
+        <label class="item item-input">
+    <input type="text" ng-model="data.Email" name="Email" placeholder="Email" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.Email.$error.required && registerForm.Email.$dirty">
+     <p class="textDanger">*Email is required</p>
+  </div>
+        <label class="item item-input">
+    <input type="text" ng-model="data.Password" name="Password" placeholder="Password" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.Password.$error.required && registerForm.Password.$dirty">
+     <p class="textDanger">*Password is required</p>
+  </div>
+        <label class="item item-input">
+    <input type="text" ng-model="data.Re_password" name="Re_password" placeholder="Re-password" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.Re_password.$error.required && registerForm.Re_password.$dirty">
+     <p class="textDanger">*Re-passworde is required</p>
+  </div>
+        <label class="item item-input">
+    <input type="number" ng-model="data.Mobile_no" name="Mobile_no" placeholder="Mobile number" required>
+  </label>
+  <div class="padding minMarginL textDanger" ng-show="registerForm.Mobile_no.$error.required && registerForm.Mobile_no.$dirty">
+     <p class="textDanger">*Mobile number is required</p>
+  </div>
+      <!----  <label class="item item-input">
+    <input type="text" ng-model="data.Company_name" placeholder="Company name">
+  </label>
+        <label class="item item-input" style="border:1px solid transparent">
+    <textarea  ng-model="data.Address" rows="4" placeholder="Address"></textarea>
+  </label>---->
+      </div>
+    
+      
+      <div class="row">
+          <div class="col"> </div>
+          <div class="col">  <button type="button" class="button button-full button-light" ng-disabled="registerForm.$invalid" ng-click="submit(data)">Submit</button></div>
+      </div>
+
+      </form>
+    
+    
+
+  </ion-content>
+</ion-view>

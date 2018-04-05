@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>927889918717-uok151bcoh3bdncfa9jdev87df36cp0g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.927889918717-uok151bcoh3bdncfa9jdev87df36cp0g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBKycGn7FmMwO-Isnso4Wo5rYWAIBR7p6A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>927889918717</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.innovita.tinytracker</string>
+	<key>PROJECT_ID</key>
+	<string>tinytracker-25d4e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tinytracker-25d4e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:927889918717:ios:4486d66c01724f95</string>
+	<key>DATABASE_URL</key>
+	<string>https://tinytracker-25d4e.firebaseio.com</string>
+</dict>
+</plist>

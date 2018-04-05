@@ -1,0 +1,22 @@
+<div class="menu-panel" ng-class="{'expanded-menu' : settingsPanel}" ng-show="settingsPanel"> 
+              <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+              <button class="button button-calm button-clear"  
+                    ng-click="openSettings(false)" 
+                    style="position: absolute; left: 0;  top: -4px; font-size: 28px;"><span class="ion-ios-arrow-back"></span></button>
+                  Settings
+                 
+              </h4> 
+
+              <div style="position: absolute; z-index: -1; top: 51px; border:1px solid #ddd; left: 0; right: 0; bottom: 0; padding: 0 1px; overflow-y:auto;">
+                    <div class="list">
+                         <a class="item item-icon-right" ng-click="openAddDevice(true)">                           
+                            Add Device
+                             <i class="icon ion-ios-plus-empty"></i>
+                          </a>
+                    </div>
+
+
+
+                </div>
+        
+</div>

@@ -1,0 +1,50 @@
+<!--<div class="draw-panel" ng-class="{open: drawing}" ng-if="state == 'drawing'" >
+</div>-->
+
+<div class="list" style="position: absolute;bottom: 0;margin: 0;left: 0;right: 0; height:118px" ng-if="state == 'drawing'">
+     <div class="item range range-positive">
+    <i class="icon ion-minus-circled"></i>
+    <input type="range" name="volume" min="250" ng-model="draw.Radius" max="1000" value="250" ng-change="setRadius();">
+    <i class="icon ion-plus-circled"></i>
+  </div>
+</div>
+<div class="list" style="position: absolute;bottom: 0;margin: 0;left: 0;right: 0; height:60px" ng-if="state == 'drawing'">
+<div class="item" style="padding:0; height:60px" >
+<div class="row" style="padding:0">
+  <div class="col col-75"  style="padding:0px">
+    <label class="item item-input" style="margin-top:6px;">
+        <input type="text" placeholder="Hub Name" ng-model="draw.Hub_name">
+    </label>
+  </div>
+  <div class="col" style="padding:0px">
+    <button class="button button-full button-calm" style="margin-top:6px;" ng-click="saveHub()">Save</button>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="draw-panel" ng-class="{open: dPanel}" ng-if="state == 'drawing'" >
+        <div class="row" style="padding:0;">
+          <div class="col col-75"  style=""> 
+                <div class="button-small" ><strong>HUB Name </strong></div>           
+          </div>
+          <div class="col" style="  text-align:center; padding-right:10px">
+            <div class="icon ion-arrow-down-b button-small" ></div>
+          </div>
+        </div>
+
+
+  <div style="overflow-y: scroll; position: absolute; top: 44px; left: 0; bottom: 0; right: 0; border-top:1px solid silver">
+        <div ng-repeat="hubData in hubArray" class="row" style="padding:0; border-top:1px solid silver; border-bottom:1px solid silver; margin-top:-1px">
+          <div class="col col-75"  style="padding:0px; padding-top:6px">
+            <div class="button-small" ng-bind="hubData.Hub_name"></div> 
+          </div>
+          <div class="col" style="padding:0px; padding-right:15px; text-align:right">
+            <button class="button button-clear button-calm icon ion-ios-trash-outline" style="float:right" ng-click="deleteHub(hubData)"></button>
+          </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="menu-panel" ng-class="{'expanded-menu' : reportsPanel}" ng-show="reportsPanel"> 
+    <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+    <button class="button button-calm button-clear"  
+        ng-click="openReports(false)" 
+        style="position: absolute; left: 0;  top: -4px; font-size: 28px;"><span class="ion-ios-arrow-back"></span></button>
+        Reports 
+         <!--<button class="button icon button-calm button-clear ion-gear-b"  
+            ng-click=""        
+            style="position: absolute; right: 10px;top: -4px; "></button>  -->              
+    </h4> 
+
+    <div class="middleContent">
+        <div>
+            <div class="list">
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Vehicle No.
+                </div>
+                <select ng-model="reportData.Device_id">
+                  <option ng-repeat="vehicle in vehicleArray" ng-value="vehicle.Truck_id">{{vehicle.Truck_No}}</option>
+                </select>
+              </label>
+              <label class="item item-input item-select">
+                <div class="input-label">
+                  Report Type
+                </div>
+                <select ng-model="reportData.type">
+                  <option selected>Distance</option>
+                  <option >Stop</option>                 
+                </select>
+              </label>
+
+                
+  <ion-radio  ng-model="reportData.viewType" ng-value="'quick'" >Quick</ion-radio>
+  <ion-radio  ng-model="reportData.viewType" ng-value="'datewise'">Date wise</ion-radio>
+    
+              <label class="item item-input item-select" ng-show="reportData.viewType == 'quick'">
+                <div class="input-label">
+                  Duration
+                </div>
+                <select ng-model="reportData.quickView">
+                  <option value="0" selected>Today</option>
+                  <option value="1">Yesterday</option>
+                  <option value="2">Last 2 Days</option>
+                  <option value="7">Last 1 Week</option>
+                </select>
+              </label>
+
+              <label class="item item-input"  ng-show="reportData.viewType == 'datewise'">
+                <span class="input-label">From</span>
+                <input type="date" ng-model="reportData.startDate1" >
+              </label>
+              <label class="item item-input"  ng-show="reportData.viewType == 'datewise'">
+                <span class="input-label">To</span>
+                <input type="date" ng-model="reportData.endDate1">
+              </label>
+               
+
+            <button class="button button-block button-calm" ng-click="openReportData(true)">
+             Generate Report
+            </button>
+
+            </div>
+        </div>
+
+                  
+
+    </div>
+        
+</div>

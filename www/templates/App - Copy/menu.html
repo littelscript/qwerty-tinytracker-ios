@@ -1,0 +1,60 @@
+<div class="menu-panel" ng-class="{'expanded-menu' : menuEnable}" ng-show="includeMenu"> 
+              <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+                    Menu
+                 <button class="button button-calm button-clear"  
+                    ng-click="menuToggle()" 
+                    style="position: absolute; right: 10px;  top: -4px; font-size: 28px;"><span class="ion-ios-close-empty"></span></button> 
+              </h4> 
+
+              <div style="position: absolute; z-index: -1; top: 51px; border:1px solid #ddd; left: 0; right: 0; bottom: 0;  overflow-y:auto;">
+                    
+                    <div class="list menu-item">                       
+                      <a class="item item-icon-left" ng-click="viewGo('watchTrack', 'watchdog');menuToggle();">
+                        <i class="icon ion-ios-monitor-outline"></i>
+                        Watchdog
+                      </a>                     
+                      <a class="item item-icon-left" ng-click="viewGo('watchTrack', 'tracker');menuToggle();">
+                        <i class="icon ion-ios-navigate-outline"></i>
+                        Tracker
+                      </a>
+                      <a class="item item-icon-left" ng-click="viewGo('watchTrack', 'drawing');menuToggle();">
+                        <i class="icon ion-compose"></i>
+                        Drawing
+                      </a> 
+                      <a class="item item-icon-left" ng-click="openNotify(true);menuToggle();">
+                        <i class="icon ion-chatbubble-working"></i>
+                             Notifications
+                        <span class="badge badge-calm">0</span>
+                      </a>
+                     <!-- <a class="item item-icon-left"  ng-click="vehicleInformation(true);menuToggle();">
+                        <i class="icon ion-chatbubble-working"></i>
+                        Vehicle Info 
+                         <span class="item-note">
+                         (Event on marker)
+                        </span>
+                      </a>
+                      <a class="item item-icon-left"  ng-click="openStoppages(true);menuToggle();">
+                        <i class="icon ion-ios-recording-outline"></i>
+                            Stoppages
+                         <span class="item-note">
+                         (Event )
+                        </span>
+                      </a>-->
+                      <a class="item item-icon-left" ng-click="openReports(true);">
+                        <i class="icon ion-document"></i>
+                        Reports
+                      </a>
+                      <a class="item item-icon-left" ng-click="openSettings(true);">
+                        <i class="icon ion-ios-gear"></i>
+                        Settings
+                      </a>
+
+                       <a class="item item-icon-left" ng-click="openContact(true);menuToggle();">
+                        <i class="icon ion-email"></i>
+                        Contact Us
+                      </a>
+
+                    </div>
+                </div>
+        
+    </div>

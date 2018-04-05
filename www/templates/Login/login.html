@@ -1,0 +1,46 @@
+<ion-view view-title="Login" hide-nav-bar="true">
+<!--<ion-nav-buttons side="right">
+      <button class="button button-positive" ng-click="doSomething()">
+        Register
+      </button>
+   </ion-nav-buttons>-->
+  
+  <ion-content class="padding loginpageCont" style="background:#40aeff"> 
+   <div style="text-align:center; margin-top:50px"><div style="margin:0 auto;width:120px; background:#fff;padding:10px; border-radius:5px; box-shadow: 1px 1px 1px #8a8a8a;"><img src="img/car_Care.png" style="width:80px; height:auto"/></div></div>
+      <h2 style="text-align:center; color:#fff; text-shadow: 1px 1px 1px #4e4e4e;">tinyTracker</h2>
+        <!-- <h4 style="text-align:center; color:#fff; text-shadow: 1px 1px 1px #4e4e4e;">Login</h4>-->
+    
+        <form name="LoginForm" novalidate>
+      <div class="list">
+          <label class="item item-input user-input">
+            <span class="user-log-icon"><i class="ion-ios-person-outline"></i></span>
+            <input type="number" ng-model="data.Username" name="Username" placeholder="Mobile number" maxlength="10" minlength="10" required>
+          </label>
+          <div class="padding minMarginL textDanger" ng-show="LoginForm.Username.$error.required && LoginForm.Username.$dirty">
+            <p class="textDanger">*Mobile number is required</p>
+          </div>
+       </div>
+        <div class="list">
+          <label class="item item-input user-input">    
+            <span class="user-log-icon"><i class="ion-ios-locked-outline"></i></span>
+            <input type="text" ng-model="data.Password" name="Password" placeholder="Password" required>
+          </label>
+          <div class="padding minMarginL textDanger" ng-show="LoginForm.Password.$error.required && LoginForm.Password.$dirty">
+            <p class="textDanger">*Password is required</p>
+          </div>
+        </div>
+        <div style="color:#fff; font-size:12px; text-align:center" ng-show="error">Please enter valid username & password to login </div>
+         <div class="row">
+          <!--<div class="col">
+          <button class="button button-full button-light" ng-click="doSomething()">
+             Register
+          </button>
+          </div>-->
+          <div class="col"> <button type="button" class="button button-full button-light login-btn" ng-disabled="LoginForm.$invalid" ng-click="login(data)">Login</button></div>
+      </div>
+        </form>
+        
+    
+
+  </ion-content>
+</ion-view>

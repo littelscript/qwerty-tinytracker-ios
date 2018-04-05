@@ -1,0 +1,103 @@
+<div class="menu-panel" ng-class="{'expanded-menu' : settingsPanel}" ng-show="settingsPanel"> 
+              <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+              <button class="button button-calm button-clear"  
+                    ng-click="openSettings(false)" 
+                    style="position: absolute; left: 0;  top: -4px; font-size: 28px;"><span class="ion-ios-arrow-back"></span></button>
+                  Settings
+                 
+              </h4> 
+
+              <div class="middleContent">
+                    <div class="list">
+                         <a class="item item-icon-right" ng-click="openSettings(false); openAddDevice(true)">                           
+                            Add Device
+                             <i class="icon ion-ios-plus-empty"></i>
+                          </a>
+                    </div>                    
+
+                    <div class="item item-divider">
+                       <i class="ion-ios-gear"></i> <strong>Device Settings</strong>
+                      </div>
+                      <br />
+
+                       <div class="list" style="margin : 0" ng-repeat="data in dataDeviceList">   
+                     
+                    <div class="item item-body" id="information-list-item-container3">
+                      <div id="information-markdown4" class="show-list-numbers-and-dots">
+                        <p style="margin-top:0px;color:#000000;">
+                             Device ID: CC-{{data.Device_id}}</p>
+                      </div>
+                    </div>
+                    <label class="item item-input">
+                        <span class="input-label">Device Name</span>
+                        <input type="text" ng-model="data.Device_name">
+
+                      </label> 
+                      <div class="item item-divider">
+                        Over Speed Limit
+                      </div>
+                      <label class="item item-input item-select">
+                        <div class="input-label">
+                          Km/Hr
+                        </div>
+                        <select ng-model="data.Speeding_limt">
+                          <option>50</option>
+                          <option>60</option>
+                          <option>70</option>
+                          <option selected>80</option>
+                          <option>90</option>
+                          <option>100</option>
+                        </select>
+                      </label>
+
+                      <div class="item item-divider">
+                        Notifications Settings
+                      </div>
+                      <div class="item item-toggle">
+                          Over Speeding
+                             <label class="toggle toggle-calm">
+                               <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="data.Speeding_noti" ng-checked="data.Speeding_noti_status==1">
+                               <div class="track">
+                                 <div class="handle"></div>
+                               </div>
+                             </label>
+                      </div>
+                      <div class="item item-toggle">
+                           Hub In/Out
+                             <label class="toggle toggle-calm">
+                               <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="data.Hub_noti" ng-checked="data.Hub_noti_status==1">
+                               <div class="track">
+                                 <div class="handle"></div>
+                               </div>
+                             </label>
+                      </div>
+
+
+
+                <div class="item item-body" style="padding:0">
+                    <div class="row" style="padding:0">
+                      <div class="col col-50" style="padding:0;text-align:center">  
+                        <button class="button button-assertive button-clear icon-left ion-ios-minus-outline" ng-click="deleteDevice(data)">
+                          Remove
+                        </button>
+                      </div>
+                      <div class="col col-50" style="padding:0; text-align:center">
+                        <button class="button button-calm button-clear icon-left ion-ios-checkmark-outline" ng-click="updateDevice(data)">
+                          Update
+                        </button>
+                      </div>
+    
+                    </div>
+                </div>
+                        
+                      
+	</div>
+
+
+
+                   
+
+
+             </div>
+        
+</div>

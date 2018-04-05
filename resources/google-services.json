@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "712556267711",
+    "firebase_url": "https://fleetcommando.firebaseio.com",
+    "project_id": "fleetcommando",
+    "storage_bucket": "fleetcommando.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712556267711:android:9f71a9401e93d126",
+        "android_client_info": {
+          "package_name": "com.innovita.fleetcommando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712556267711-o5ucikvafcp0dg1683ukt5rv7b9rn83g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoLgU0l1BLnirg0hyCxhd0o7dwl4s0QGo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

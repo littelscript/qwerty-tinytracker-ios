@@ -1,0 +1,43 @@
+<ion-content padding="false" class=" manual-remove-top-padding" scroll="false" >
+    
+    <h4 style="color:#11c1f3;font-weight:300;text-align:center;" class="padding-top"> 
+        <button class="button icon button-calm button-clear ion-navicon"  
+            ng-click="menuToggle()" 
+            ng-hide="dPanel"
+            style="position: absolute; left: 10px;top: 4px;z-index:20"></button> 
+            {{viewSelection}}
+          
+        <!--<button class="button-calm button-clear button icon ion-ios-timer" 
+            ng-if="state == 'tracker'"
+            style="position: absolute; right: 62px;top: 4px;"></button>-->
+        <button class="button icon button-calm button-clear ion-ios-search"  
+            ng-click="searchpanel(true);"    
+              ng-if="state == 'tracker'||state == 'watchdog'"    
+            style="position: absolute; right: 10px;top: 4px; z-index:20"></button>
+            <button class="button icon button-calm button-clear"
+                ng-class="{'ion-ios-paper-outline' : !dPanel, 'ion-ios-close-empty' : dPanel}"  
+               ng-click="hublistPanel();"    
+              ng-if="state == 'drawing'"    
+            style="position: absolute; right: 10px;top: 4px; z-index:20"></button>
+     </h4>
+
+
+    <div class="map" id="map_canvas" style="background: #f7f7f7;position: absolute;left: 0;top: 51px; right: 0;bottom: 0;">
+       <div ng-include src="'templates/App/tracker-media.html'" ></div>
+       <div ng-include src="'templates/App/drawing.html'" ></div>
+    </div>
+  
+    <div  class="content" ng-include src="'templates/App/information.html'"></div>    
+     <div  class="content" ng-include src="'templates/App/search.html'"></div>
+    <div  class="content" ng-include src="'templates/App/notifications.html'"></div>
+    <div  class="content" ng-include src="'templates/App/contactUs.html'"></div>
+    <div  class="content" ng-include src="'templates/App/settings.html'"></div>
+    <div  class="content" ng-include src="'templates/App/stoppages.html'"></div>
+    <div  class="content" ng-include src="'templates/App/addDevice.html'"></div>
+    <div  class="content" ng-include src="'templates/App/reports.html'"></div>
+     <div  class="content" ng-include src="'templates/App/reportdata.html'"></div>
+    
+
+
+   <div  class="content" ng-include src="'templates/App/menu.html'"></div>
+</ion-content>

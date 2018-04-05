@@ -1,0 +1,21 @@
+<div class="search-panel" ng-class="{'open-search' : openSearch}" > 
+    
+    <div>
+    <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+        <button class="button button-calm button-clear"  
+                    ng-click="searchpanel(false)" 
+                    style="position: absolute; left: 0;  top: -4px; font-size: 28px; z-index:20"><span class="ion-ios-arrow-back"></span>
+                    </button> 
+    </h4> 
+     <input type="text" placeholder="Search Here" style="position: absolute;left: 49px;right: 0;top: 0;margin-top: 12px;min-width: 75%;"/>
+    
+       <!-- <button class="button button-calm button-clear"  
+                    ng-click="searchpanel(false)" 
+                    style="position: absolute; right: 10px;  top: 3px; font-size: 28px;"><span class="ion-ios-close-empty"></span></button> -->
+    </div>   
+    <div style="position: absolute; z-index: -1; top: 51px; border:1px solid #ddd; left: 0; right: 0; bottom: 0; padding: 15px; overflow-y:auto;">
+             <ul class="list">
+                  <li ng-repeat="vehicle in vehicleArray" ng-click="search(vehicle)">{{vehicle.Device_name}}</li>            
+            </ul>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<div class="tracker-panel" ng-class="{open: tPanel}" ng-if="state == 'tracker'">
+   <button class="button button-icon icon button-clear button-calm ion-ios-plus-empty button-small" ng-click="toggleTrackerPanel(true)"
+    ng-show="!tPanel" style="margin-top: -29px;position:absolute;right:5px;background: #fff;border: 1px solid silver; border-bottom:0; margin-right: 5px; border-radius: 5px 5px 0 0;"></button>
+    <button class="button button-icon icon button-clear button-calm ion-ios-minus-empty button-small" 
+  ng-click="toggleTrackerPanel(false)" ng-show="tPanel" 
+    style="margin-top: -29px;position:absolute;right:5px;background: #fff; border: 1px solid silver; border-bottom:0; margin-right: 5px; border-radius: 5px 5px 0 0;"></button> 
+
+  <div class="tracker_inside">
+    <ion-list id="information-list2">
+      <div class="item item-body">
+        <div class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Start-End Date-time</strong>
+            <span ng-bind="tracker.viewData.startDateTime"></span>-<span ng-bind="tracker.viewData.endDateTime"></span>
+          </p>
+        </div>
+      </div>
+      <div class="item item-body">
+        <div class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Live location</strong>
+            <span ng-bind="tracker.viewData.currentLocation"></span>
+          </p>
+        </div>
+      </div>
+      <div class="item item-body">
+        <div class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Total distance</strong>
+            <span ng-bind="tracker.viewData.totalDistance"></span>
+          </p>
+        </div>
+      </div>
+      <div class="item item-body">
+        <div class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Average speed</strong>
+            <span ng-bind="tracker.viewData.averageSpeed">
+                 </p>
+              </div>
+            </div>
+            <div class="item item-body">
+              <div class="show-list-numbers-and-dots">
+                <p style="margin-top:0px;color:#000000;">
+                  <strong>Total Duration</strong>
+                  <span ng-bind="tracker.viewData.totalDuration">
+                 </p>
+              </div>
+            </div>
+            <div class="item item-body">
+              <div class="show-list-numbers-and-dots">
+                <p style="margin-top:0px;color:#000000;">
+                  <strong>Stop duration</strong>
+                  <span ng-bind="tracker.viewData.stopDuration">
+                 </p>
+              </div>
+            </div>
+            <div class="item item-body">
+              <div class="show-list-numbers-and-dots">
+                <p style="margin-top:0px;color:#000000;">
+                  <strong>Max speed</strong>
+                  <span ng-bind="tracker.viewData.maxSpeed">
+                 </p>
+              </div>
+            </div>
+            <!---<div class="item item-body">
+              <div class="show-list-numbers-and-dots">
+                <p style="margin-top:0px;color:#000000;">
+                  <strong>Destination</strong>
+                  - Sample text adrress Sample text adrress
+                 </p>
+              </div>
+            </div>------>
+
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label"> <strong>From </strong></span>
+            <input type="date" ng-model="dateSelect.startDate" placeholder="select start date">
+            </label>
+            <label class="item item-input">
+                <span class="input-label"> <strong>To </strong></span>
+                <input type="date" ng-model="dateSelect.endDate" placeholder="select end date">
+              </label>
+        </div>
+
+        <button class="button button-block button-calm" ng-click="getTrackerSubmit();">
+                Submit
+            </button>
+
+    </ion-list>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="list" style="position: absolute;bottom: 0;margin: 0;left: 0;right: 0; height:60px;z-index:20;" ng-if="state == 'tracker'">
+    <div class="item" style="padding:4px 10px; height:60px">
+      <div class="row btn-row" style="padding-top:0">
+
+        <div class="col" style="text-align:center;">
+          <button class="button button-icon icon button-clear button-calm ion-ios-rewind" ng-disabled="true"></button>
+        </div>
+        <div class="col" style="text-align:center;">
+          <button class="button button-icon icon button-clear button-calm ion-ios-skipbackward" ng-disabled="true"></button>
+        </div>
+        <div class="col" style="text-align:center;">
+          
+            <button style=" /*margin-top: -2px;*/" class="button button-icon icon button-clear button-calm  ion-play" ng-click="play();" ng-disabled="tracker.viewData.status"></button>
+          <!--<div style="width:40px; height:40px; background:#11c1f3; margin:0 auto; border-radius:50%; padding-left:3px"><button style=" margin-top: -2px;" class="button button-icon icon button-assertive ion-ios-play" ng-click="play();" ng-disabled="tracker.viewData.status"></button></div>-->
+        </div>
+        <div class="col" style="text-align:center;">
+          <button class="button button-icon icon button-clear button-calm ion-stop" ng-click="stop();" ng-disabled="tracker.viewData.status"></button>
+        </div>
+         <div class="col" style="text-align:center;">
+          <button class="button button-icon icon button-clear button-calm ion-ios-skipforward" ng-disabled="true" ></button>
+        </div>
+        <div class="col" style="text-align:center;">
+          <button class="button button-icon icon button-clear button-calm ion-ios-fastforward" ng-disabled="true"></button>
+        </div>
+      </div>
+    </div>
+  </div>

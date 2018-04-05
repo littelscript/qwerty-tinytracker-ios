@@ -1,0 +1,53 @@
+<div class="menu-panel" ng-class="{'expanded-menu' : reportsDataPanel}" ng-show="reportsDataPanel"> 
+    <h4 style="color:#03AEFF;font-weight:300;text-align:center;  position:absolute; top:0; left:0; right:0" class="padding-top">
+    <button class="button button-calm button-clear"  
+        ng-click="openReports(true); openReportData(false)" 
+        style="position: absolute; left: 0;  top: -4px; font-size: 28px;"><span class="ion-ios-arrow-back"></span></button>
+        Report Display                
+    </h4> 
+    <div class="middleContent" style="overflow:auto !important; padding:0">  
+    <style>
+        table{width:100%}
+        table thead td{ font-weight:bold}
+        table td{ border:1px solid silver; padding:6px 12px;}
+        
+      
+        
+    </style>      
+        <div>
+           <table class="tableHead">
+                <thead>
+                <tr>
+                    <td>Date</td>
+                    <td>Distance(KM)</td>
+                    <td>Stoppage(HH:MM:SS)</td>
+                    
+                </tr>
+                </thead>
+                <tbody>
+            <tr ng-if="reportData.type=='Distance'" ng-repeat="distance in distanceArray track by $index">
+                <td ng-bind="datesArray[$index]"></td>
+                <td ng-bind="distance | roundOff"></td>
+                <td ng-bind="TimeArray[$index] | HoursFormat"></td>
+                
+            </tr>
+            <tr ng-if="reportData.type=='Stop'" ng-repeat="distance in distanceArray track by $index">
+                <td ng-bind="datesArray[$index]"></td>
+                <td ng-bind="distance | roundOff"></td>
+                <td ng-bind="TimeArray[$index] | HoursFormat"></td>
+                
+            </tr>
+            
+
+
+
+            </tbody>
+           </table>
+           
+
+           
+
+        </div>
+    </div>
+        
+</div>

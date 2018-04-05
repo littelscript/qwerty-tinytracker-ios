@@ -1,0 +1,41 @@
+
+<style>
+   .login-form .item.item-checkbox, .login-form .item-stacked-label{ background:none !important; border:transparent; color:#fff; padding-right:15px;}
+.login-form .input-label{ color:#fff;}
+.login-form .item-stacked-label input{padding-right:15px; padding-left:15px;}
+</style>
+
+<ion-content style="background-color:#00B5FF;"  padding="true">
+    <div id="login-container3">
+      <h2 id="login-heading1" style="color:#FFFFFF;font-weight:400;text-align:center;" class="app-heading">CarCare</h2>
+      <div class="spacer" style="height: 10px;"></div>
+      <h2 id="login-heading2" style="color:#FFFFFF;font-weight:300;text-align:center;"> Login </h2>
+    </div>
+    <div class="spacer" style="height: 20px;">
+       <span class="input-label" ng-show="loginStatus">error</span>
+    </div>
+    <form id="login-form3" class="list login-form">
+      <label class="item item-input item-stacked-label" id="login-input4">
+        <span class="input-label">Device ID</span>
+        <input type="text" placeholder="" value="10001" ng-model="dataLogin.Device_id">
+      </label>
+      <!--<label class="item item-input item-stacked-label" id="login-input5">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="" ng-model="dataLogin.Password">
+      </label>-->
+      <label class="item item-input item-stacked-label" id="login-input6">
+        <span class="input-label">Mobile No.</span>
+        <input type="number" placeholder="" value="8411805666" ng-model="dataLogin.Mobile_no">
+      </label>
+       <div class="spacer" style="height: 15px;"></div>
+       <ion-checkbox id="login-checkbox2">I Agree to Terms &amp; Conditions</ion-checkbox>
+
+        <button id="login-button1"  class="button button-stable"
+               style="font-weight: 300; padding-right: 17px; padding-left: 17px; float: right; margin-top: 22px; margin-right: 30px;min-height: 32px"
+            ng-click="getLogin();"
+            >LOGIN</button>
+      <div class="spacer" style="height: 50px;"></div>
+    </form>
+</ion-content>
+
+
